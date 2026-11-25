@@ -1,5 +1,12 @@
 {
   "name": "Pack",
-  "files": [],
-  "version": "7397c73"
+  "files": [
+    {
+      "path": "mods/CustomPlayerModels-Fabric-1.21-0.6.27a.jar",
+      "url": "pack/mods/CustomPlayerModels-Fabric-1.21-0.6.27a.jar",
+      "sha1": "bc902bd297c54d50b1ed7ffd2036464c970b0703",
+      "size": 2845602
+    }
+  ],
+  "version": "e514fdd"
 }
