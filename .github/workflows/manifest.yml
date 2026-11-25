@@ -1,0 +1,62 @@
+name: Actualizar manifest del pack
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'pack/**'
+      - 'pack.config.json'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  manifest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Generar manifest.json
+        run: |
+          node - <<'EOF'
+          const fs = require('fs'), path = require('path'), crypto = require('crypto');
+          const root = process.cwd(), packDir = path.join(root, 'pack'), cfgFile = path.join(root, 'pack.config.json');
+          const cfg = fs.existsSync(cfgFile) ? JSON.parse(fs.readFileSync(cfgFile, 'utf8')) : {};
+          const once = (cfg.once || ['config/']).map((p) => p.replace(/\\/g, '/'));
+          function* walk(d) {
+            for (const e of fs.readdirSync(d, { withFileTypes: true })) {
+              const f = path.join(d, e.name);
+              if (e.isDirectory()) yield* walk(f);
+              else if (!['.gitkeep', '.DS_Store', 'Thumbs.db'].includes(e.name)) yield f;
+            }
+          }
+          const files = [];
+          if (fs.existsSync(packDir)) for (const full of walk(packDir)) {
+            const rel = path.relative(packDir, full).split(path.sep).join('/');
+            if (rel.includes('..')) continue;
+            const e = { path: rel, url: 'pack/' + rel.split('/').map(encodeURIComponent).join('/'),
+              sha1: crypto.createHash('sha1').update(fs.readFileSync(full)).digest('hex'), size: fs.statSync(full).size };
+            if (once.some((p) => rel.startsWith(p))) e.mode = 'once';
+            files.push(e);
+          }
+          files.sort((a, b) => a.path.localeCompare(b.path));
+          const m = { name: cfg.name || 'Pack', files };
+          if (Array.isArray(cfg.modrinth) && cfg.modrinth.length) m.modrinth = cfg.modrinth;
+          if (Array.isArray(cfg.baseMods)) m.baseMods = cfg.baseMods;
+          m.version = crypto.createHash('sha1').update(JSON.stringify([files, m.modrinth || [], m.baseMods || null])).digest('hex').slice(0, 7);
+          fs.writeFileSync('manifest.json', JSON.stringify(m, null, 2) + '\n');
+          EOF
+      - name: Guardar manifest.json
+        run: |
+          if [ -n "$(git status --porcelain manifest.json)" ]; then
+            git config user.name "claudelauncher-bot"
+            git config user.email "bot@users.noreply.github.com"
+            git add manifest.json
+            git commit -m "Actualizar manifest.json"
+            git push
+          else
+            echo "manifest.json ya estaba al día"
+          fi
