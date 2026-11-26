@@ -26,11 +26,23 @@
       "size": 5389006
     },
     {
+      "path": "mods/waterframes-FABRIC-mc1.21.1-v3.0.0-alpha.1.jar",
+      "url": "pack/mods/waterframes-FABRIC-mc1.21.1-v3.0.0-alpha.1.jar",
+      "sha1": "32dc4c6e5271cc0baeb7114863d3e7012f9ce570",
+      "size": 574762
+    },
+    {
+      "path": "mods/watermedia-3.0.3.jar",
+      "url": "pack/mods/watermedia-3.0.3.jar",
+      "sha1": "42c9c56024d7e30897e20336798a0f6f756df366",
+      "size": 3455157
+    },
+    {
       "path": "mods/WebDisplays-Unofficial-Port-fabric-1.21.1.jar",
       "url": "pack/mods/WebDisplays-Unofficial-Port-fabric-1.21.1.jar",
       "sha1": "3aefc7fd7230b1b277478c4ce157249e2b713e0e",
       "size": 1077970
     }
   ],
-  "version": "eaade70"
+  "version": "2891c46"
 }
