@@ -6,7 +6,19 @@
       "url": "pack/mods/CustomPlayerModels-Fabric-1.21-0.6.27a.jar",
       "sha1": "bc902bd297c54d50b1ed7ffd2036464c970b0703",
       "size": 2845602
+    },
+    {
+      "path": "mods/mcef-fabric-2.1.6-1.21.1.jar",
+      "url": "pack/mods/mcef-fabric-2.1.6-1.21.1.jar",
+      "sha1": "68f9c951b02e864ac6a0b9d4a60c8547d326eb26",
+      "size": 221767
+    },
+    {
+      "path": "mods/WebDisplays-Unofficial-Port-fabric-1.21.1.jar",
+      "url": "pack/mods/WebDisplays-Unofficial-Port-fabric-1.21.1.jar",
+      "sha1": "3aefc7fd7230b1b277478c4ce157249e2b713e0e",
+      "size": 1077970
     }
   ],
-  "version": "e514fdd"
+  "version": "d5d30c0"
 }
