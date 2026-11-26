@@ -1,5 +1,12 @@
 {
-  "admins": [],
+  "admins": [
+    {
+      "name": "Ramaa_nose",
+      "type": "offline",
+      "uuid": "f2c8bb3b-c9ce-3476-aaba-998ffacccda4",
+      "addedAt": "2026-11-26"
+    }
+  ],
   "owner": {
     "name": "ThyagoFM",
     "type": "offline",
