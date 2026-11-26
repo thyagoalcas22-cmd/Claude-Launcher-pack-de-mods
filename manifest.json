@@ -8,6 +8,12 @@
       "size": 2845602
     },
     {
+      "path": "mods/e4mc-fabric-6.2.3.jar",
+      "url": "pack/mods/e4mc-fabric-6.2.3.jar",
+      "sha1": "5420209f8560df548625f1defc24ebb94682f0fd",
+      "size": 663705
+    },
+    {
       "path": "mods/mcef-fabric-2.1.6-1.21.1.jar",
       "url": "pack/mods/mcef-fabric-2.1.6-1.21.1.jar",
       "sha1": "68f9c951b02e864ac6a0b9d4a60c8547d326eb26",
@@ -26,5 +32,5 @@
       "size": 1077970
     }
   ],
-  "version": "8793d6d"
+  "version": "eaade70"
 }
