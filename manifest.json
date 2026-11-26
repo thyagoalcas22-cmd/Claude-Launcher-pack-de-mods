@@ -14,11 +14,17 @@
       "size": 221767
     },
     {
+      "path": "mods/voicechat-fabric-1.21.1-2.6.27.jar",
+      "url": "pack/mods/voicechat-fabric-1.21.1-2.6.27.jar",
+      "sha1": "0b078093df28328d8faa0dc6495969bab5c75707",
+      "size": 5389006
+    },
+    {
       "path": "mods/WebDisplays-Unofficial-Port-fabric-1.21.1.jar",
       "url": "pack/mods/WebDisplays-Unofficial-Port-fabric-1.21.1.jar",
       "sha1": "3aefc7fd7230b1b277478c4ce157249e2b713e0e",
       "size": 1077970
     }
   ],
-  "version": "d5d30c0"
+  "version": "8793d6d"
 }
