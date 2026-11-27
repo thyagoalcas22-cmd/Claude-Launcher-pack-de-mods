@@ -20,6 +20,12 @@
       "size": 221767
     },
     {
+      "path": "mods/Pehkui-3.8.3+1.14.4-1.21.jar",
+      "url": "pack/mods/Pehkui-3.8.3%2B1.14.4-1.21.jar",
+      "sha1": "3ce548910f0aa2cef79dc333982493ccf8d73a3e",
+      "size": 555041
+    },
+    {
       "path": "mods/voicechat-fabric-1.21.1-2.6.27.jar",
       "url": "pack/mods/voicechat-fabric-1.21.1-2.6.27.jar",
       "sha1": "0b078093df28328d8faa0dc6495969bab5c75707",
@@ -50,5 +56,5 @@
       "size": 35848
     }
   ],
-  "version": "62cca51"
+  "version": "4f116ce"
 }
