@@ -42,7 +42,13 @@
       "url": "pack/mods/WebDisplays-Unofficial-Port-fabric-1.21.1.jar",
       "sha1": "3aefc7fd7230b1b277478c4ce157249e2b713e0e",
       "size": 1077970
+    },
+    {
+      "path": "resourcepacks/Crispy_Hud_V1.01.zip",
+      "url": "pack/resourcepacks/Crispy_Hud_V1.01.zip",
+      "sha1": "d3f60abf732a7cb2fd595bb1d483fbee6a63b2a3",
+      "size": 35848
     }
   ],
-  "version": "2891c46"
+  "version": "62cca51"
 }
